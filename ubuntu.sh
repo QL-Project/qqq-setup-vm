@@ -48,7 +48,7 @@ echo
 
 # Starting QLauncher
 echo "QLauncher start"
-$DIR_QL/qlauncher.sh start
+$QLS start
 echo
 
 # Setup port

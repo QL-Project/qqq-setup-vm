@@ -26,7 +26,6 @@ echo
 }
 
 function setup_variables() {
-    # Colors
     BOLD="\033[1m"
     RST="\033[0m"
 }
