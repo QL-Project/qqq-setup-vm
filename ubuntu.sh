@@ -62,7 +62,7 @@ sudo ufw allow 32440:32449/tcp
 sudo ufw allow 32443/tcp
 sudo ufw allow 32446/tcp
 sudo ufw allow 443/tcp
-sudo ufw enable
+sudo ufw enable < y
 echo
 
 # automatically run QLauncher
