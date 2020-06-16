@@ -24,11 +24,11 @@ function echo () {
 
 echo "Install needed package"
 sudo apt update
-sudo apt install -y \
+sudo apt install \
          curl \
          docker.io \
          net-tools \
-         wget
+         wget -y
 
 echo
 echo "Start docker"
@@ -46,6 +46,11 @@ rm "$QLPKG"
 echo "Done."
 echo
 
+# synology root
+echo
+sudo mount --make-rshared /
+echo
+
 # Starting QLauncher
 echo "QLauncher start"
 $QLS start
@@ -54,7 +59,7 @@ echo
 # Setup port
 echo "Configure open port for QLauncher (32440 - 32449)"
 sudo ufw allow 32440:32449/tcp
-sudo ufw allow 22/tcp
+sudo ufw allow 443/tcp
 sudo ufw enable
 echo
 
