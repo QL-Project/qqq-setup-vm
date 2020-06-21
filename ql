@@ -27,6 +27,8 @@ echo
 }
 
 function setup_variables() {
+    DIRQL="$HOME/qlauncher"
+    ZIP="app.tar.gz"
     BOLD="\033[1m"
     RST="\033[0m"
 }
@@ -56,8 +58,6 @@ function status() {
 }
 
 function update() {
-    DIRQL="$HOME/qlauncher"
-    ZIP="app.tar.gz"
     if [[ -d $DIRQL ]]; then
        if [[ -e ${ZIP} ]]; then
           rm -rf "${ZIP}"
