@@ -57,6 +57,9 @@ function status() {
     $QLS status
 }
 
+function zipdl() {
+}
+
 function update() {
     if [[ -d $DIRQL ]]; then
        if [[ -e ${ZIP} ]]; then
