@@ -65,7 +65,7 @@ function zipdl() {
 }
 
 function update() {
-    if [[ -d $DIRQL ]]; then
+    if [[ -d ${DIRQL} ]]; then
        if [[ -e ${ZIP} ]]; then
           # remove package if exist then start updating
           rm -rf "${ZIP}"
