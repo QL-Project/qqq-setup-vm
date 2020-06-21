@@ -58,17 +58,21 @@ function status() {
 }
 
 function zipdl() {
+    wget https://github.com/poseidon-network/qlauncher-linux/releases/latest/download/ql-linux.tar.gz -O "${ZIP}"
+    tar -vxzf "${ZIP}" -C "${DIRQL}"
+    echo "restart QLauncher"
+    restart
 }
 
 function update() {
     if [[ -d $DIRQL ]]; then
        if [[ -e ${ZIP} ]]; then
+          # remove package if exist then start updating
           rm -rf "${ZIP}"
+          zipdl
        else
-          wget https://github.com/poseidon-network/qlauncher-linux/releases/latest/download/ql-linux.tar.gz -O "${ZIP}"
-          tar -vxzf "${ZIP}" -C "${DIRQL}"
-          echo "restart QLauncher"
-          restart
+          # seems file doesn't exist, lets start updating
+          zipdl
           rm -rf "${ZIP}"
        fi
     fi
