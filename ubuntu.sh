@@ -13,9 +13,8 @@
 #       before executing.
 #
 
-DIR=$(pwd)
-DIR_QL="$DIR/qlauncher"
-QLS="$DIR_QL/qlauncher.sh"
+DIRQL="$HOME/qlauncher"
+QLS="$DIRQL/qlauncher.sh"
 QLPKG="app.tar.gz"
 
 function echo () {
@@ -37,12 +36,12 @@ echo
 
 # download QLauncher
 echo "Create dir QLauncher"
-mkdir "$DIR_QL"
+mkdir "${DIRQL}"
 echo "Downloading ..."
-wget https://github.com/poseidon-network/qlauncher-linux/releases/latest/download/ql-linux.tar.gz -O "$QLPKG"
+wget https://github.com/poseidon-network/qlauncher-linux/releases/latest/download/ql-linux.tar.gz -O "${QLPKG}"
 echo "Extracting QLauncher"
-tar -vxzf "$QLPKG" -C "$DIR_QL"
-rm "$QLPKG"
+tar -vxzf "${QLPKG}" -C "${DIRQL}"
+rm "${QLPKG}"
 echo "Done."
 echo
 
@@ -62,7 +61,7 @@ sudo ufw allow 32440:32449/tcp
 sudo ufw allow 32443/tcp
 sudo ufw allow 32446/tcp
 sudo ufw allow 443/tcp
-sudo ufw enable < y
+yes | sudo ufw enable
 echo
 
 # automatically run QLauncher

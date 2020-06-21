@@ -22,6 +22,7 @@ echo " -h | --help:      Help menu"
 echo " -k | --kickoff:   Start miner"
 echo " -r | --restart:   Restart miner"
 echo " -s | --status:    Status miner"
+echo " -u | --update:    Update QLauncher"
 echo
 }
 
@@ -54,6 +55,25 @@ function status() {
     $QLS status
 }
 
+function zipdl() {
+}
+
+function update() {
+    DIRQL="$HOME/qlauncher"
+    ZIP="app.tar.gz"
+    if [[ -d $DIRQL ]]; then
+       if [[ -e ${ZIP} ]]; then
+          rm -rf "${ZIP}"
+       else
+          wget https://github.com/poseidon-network/qlauncher-linux/releases/latest/download/ql-linux.tar.gz -O "${ZIP}"
+          tar -vxzf "${ZIP}" -C "${DIRQL}"
+          echo "restart QLauncher"
+          restart
+          rm -rf "${ZIP}"
+       fi
+    fi
+}
+
 function parse_parameters() {
     while [[ ${#} ]]; do
         case "${1}" in
@@ -63,6 +83,7 @@ function parse_parameters() {
             "-k"|"--kickoff") kickoff ;;
             "-r"|"--restart") restart ;;
             "-s"|"--status") status ;;
+            "-u"|"--update") update ;;
 
             # HELP!
             "-h"|"--help") help_menu; exit ;;
