@@ -55,9 +55,6 @@ function status() {
     $QLS status
 }
 
-function zipdl() {
-}
-
 function update() {
     DIRQL="$HOME/qlauncher"
     ZIP="app.tar.gz"
