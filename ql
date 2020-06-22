@@ -90,7 +90,7 @@ function parse_parameters() {
 
         # HELP!
         "-h"|"--help"|*) help_menu ;;
-        esac
+    esac
 }
 
 setup_variables
