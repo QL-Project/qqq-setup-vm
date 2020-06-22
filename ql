@@ -79,23 +79,18 @@ function update() {
 }
 
 function parse_parameters() {
-    while [[ ${#} ]]; do
-        case "${1}" in
-            "-b"|"--bind") bind  ;;
-            "-c"|"--check") check ;;
-            "-f"|"--freeze") freeze ;;
-            "-k"|"--kickoff") kickoff ;;
-            "-r"|"--restart") restart ;;
-            "-s"|"--status") status ;;
-            "-u"|"--update") update ;;
+    case "${1}" in
+        "-b"|"--bind") bind  ;;
+        "-c"|"--check") check ;;
+        "-f"|"--freeze") freeze ;;
+        "-k"|"--kickoff") kickoff ;;
+        "-r"|"--restart") restart ;;
+        "-s"|"--status") status ;;
+        "-u"|"--update") update ;;
 
-            # HELP!
-            "-h"|"--help") help_menu; exit ;;
+        # HELP!
+        "-h"|"--help"|*) help_menu ;;
         esac
-
-        [[ -z ${@} ]] && { help_menu; } 
-        exit
-    done
 }
 
 setup_variables
