@@ -45,6 +45,15 @@ sudo ufw allow 32448/tcp
 sudo ufw allow 32449/tcp
 sudo ufw allow 443/tcp
 sudo ufw allow 22/tcp
+# allow ipfs, v2ray and others
+sudo ufw allow 2376/tcp
+sudo ufw allow 2377/tcp
+sudo ufw allow 7946/tcp
+sudo ufw allow 7946/udp
+sudo ufw allow 4789/udp
+sudo ufw allow 8080/tcp
+sudo ufw allow 8081/tcp
+sudo ufw allow 4001/tcp
 
 # download QLauncher
 echo "Create dir QLauncher"
