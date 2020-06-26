@@ -31,7 +31,6 @@ echo
 
 # Setup port
 yes | sudo ufw enable
-sudo ufw start
 echo "QLauncher need port 433, 32440, 32443, 32446 to be open"
 sudo ufw allow 32440/tcp
 sudo ufw allow 32441/tcp
