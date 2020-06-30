@@ -65,11 +65,6 @@ rm "${QLPKG}"
 echo "Done."
 echo
 
-# synology root
-echo
-sudo mount --make-rshared /
-echo
-
 # automatically run QLauncher
 echo "run QLauncher on system startup"
 cat > /etc/systemd/system/qlauncher.service << EOF
