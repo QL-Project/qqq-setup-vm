@@ -86,7 +86,5 @@ echo "run ql -h or ql --help"
 echo
 
 # last step
-echo "export QLS=$QLS" >> ~/.bashrc
 curl -fsSL https://raw.githubusercontent.com/Xavier099/qqq-setup/master/ql -o /usr/bin/ql
 chmod +x /usr/bin/ql
-source ~/.bashrc

@@ -31,6 +31,7 @@ function setup_variables() {
     ZIP="app.tar.gz"
     BOLD="\033[1m"
     RST="\033[0m"
+    QLS="$DIRQL/qlauncher.sh"
 }
 
 function bind() {
