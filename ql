@@ -68,14 +68,20 @@ function zipdl() {
 function update() {
     if [[ -d ${DIRQL} ]]; then
        if [[ -e ${ZIP} ]]; then
+          echo
           # remove package if exist then start updating
           rm -rf "${ZIP}"
           zipdl
        else
+          echo
           # seems file doesn't exist, lets start updating
           zipdl
           rm -rf "${ZIP}"
        fi
+    else
+       echo
+       echo "QLauncher doesn't exist, read the README for how to install it"
+       echo
     fi
 }
 
