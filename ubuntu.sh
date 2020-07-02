@@ -11,6 +11,7 @@
 DIRQL="$HOME/qlauncher"
 QLS="$DIRQL/qlauncher.sh"
 QLPKG="app.tar.gz"
+DKR="get-docker.sh"
 
 function echo () {
     command echo -e "${@}"
@@ -25,8 +26,8 @@ sudo apt install \
 
 echo
 echo "docker"
-curl -fsSL https://get.docker.com -o get-docker.sh
-sh get-docker.sh
+curl -fsSL https://get.docker.com -o ${DKR}
+sh ${DKR}
 echo
 
 # Setup port
@@ -88,3 +89,8 @@ echo
 # last step
 curl -fsSL https://raw.githubusercontent.com/Xavier099/qqq-setup/master/ql -o /usr/bin/ql
 chmod +x /usr/bin/ql
+
+# cleanup
+rm ${DKR}
+rm ${QLPKG}
+rm $HOME/ubuntu.sh
