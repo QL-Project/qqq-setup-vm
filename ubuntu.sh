@@ -93,4 +93,4 @@ chmod +x /usr/bin/ql
 # cleanup
 rm ${DKR}
 rm ${QLPKG}
-rm $HOME/ubuntu.sh
+rm ubuntu.sh
