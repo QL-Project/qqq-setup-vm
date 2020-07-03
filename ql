@@ -67,6 +67,9 @@ function zipdl() {
 
 function update() {
     if [[ -d ${DIRQL} ]]; then
+       echo "folder exist, deleting current qlauncher folder"
+       rm -rf ${DIRQL}
+       mkdir ${DIRQL}
        if [[ -e ${ZIP} ]]; then
           echo
           # remove package if exist then start updating
