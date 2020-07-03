@@ -61,8 +61,8 @@ function status() {
 function zipdl() {
     wget https://github.com/poseidon-network/qlauncher-linux/releases/latest/download/ql-linux.tar.gz -O "${ZIP}"
     tar -vxzf "${ZIP}" -C "${DIRQL}"
-    echo "restart QLauncher"
-    restart
+    echo "start QLauncher"
+    kickoff
 }
 
 function update() {
