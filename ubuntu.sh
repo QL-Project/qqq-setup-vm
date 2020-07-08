@@ -54,6 +54,7 @@ sudo ufw allow 4789/udp
 sudo ufw allow 8080/tcp
 sudo ufw allow 8081/tcp
 sudo ufw allow 4001/tcp
+sudo ufw allow 9096/tcp
 
 # download QLauncher
 echo "Create dir QLauncher"
