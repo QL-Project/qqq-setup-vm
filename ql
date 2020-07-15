@@ -6,24 +6,24 @@ function echo() {
 }
 
 function help_menu() {
-echo
-echo "${BOLD}QLauncher menu${RST}"
-echo
-echo "${BOLD}USAGE:${RST} ${0} <options>"
-echo
-echo "${BOLD}EXAMPLE:${RST} ${0} -s"
-echo
-echo "${BOLD}EXAMPLE:${RST} ${0} --status"
-echo
-echo " -b | --bind:      Bind account to QQQ App"
-echo " -c | --check:     Verify Installation"
-echo " -f | --freeze:    Stop miner"
-echo " -h | --help:      Help menu"
-echo " -k | --kickoff:   Start miner"
-echo " -r | --restart:   Restart miner"
-echo " -s | --status:    Status miner"
-echo " -u | --update:    Update QLauncher"
-echo
+    echo
+    echo "${BOLD}QLauncher menu${RST}"
+    echo
+    echo "${BOLD}USAGE:${RST} ${0} <options>"
+    echo
+    echo "${BOLD}EXAMPLE:${RST} ${0} -s"
+    echo
+    echo "${BOLD}EXAMPLE:${RST} ${0} --status"
+    echo
+    echo " -b | --bind:      Bind account to QQQ App"
+    echo " -c | --check:     Verify Installation"
+    echo " -f | --freeze:    Stop miner"
+    echo " -h | --help:      Help menu"
+    echo " -k | --kickoff:   Start miner"
+    echo " -r | --restart:   Restart miner"
+    echo " -s | --status:    Status miner"
+    echo " -u | --update:    Update QLauncher"
+    echo
 }
 
 function setup_variables() {
