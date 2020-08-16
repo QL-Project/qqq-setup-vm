@@ -80,6 +80,9 @@ RemainAfterExit=yes
 [Install]
 WantedBy=multi-user.target
 EOF
+echo
+systemctl daemon-reload
+systemctl enable qlauncher
 echo "done."
 echo
 
