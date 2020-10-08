@@ -13,3 +13,9 @@ chmod +x ubuntu.sh
 bash ubuntu.sh
 ```
 
+Update ql:
+```
+curl -fsSL https://raw.githubusercontent.com/Xavier099/qqq-setup/master/ql -o /usr/bin/ql
+chmod +x /usr/bin/ql
+```
+
