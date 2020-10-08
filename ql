@@ -22,6 +22,7 @@ function help_menu() {
     echo " -k | --kickoff:   Start miner"
     echo " -r | --restart:   Restart miner"
     echo " -s | --status:    Status miner"
+    echo " -S | --sn:        Change Serial Number"
     echo " -u | --update:    Update QLauncher"
     echo
 }
@@ -56,6 +57,39 @@ function restart() {
 
 function status() {
     $QLS status
+}
+
+function change_sn() {
+    read -r -p "do you want to change the serial number? [y/N]" PROMPT
+    if [[ $PROMPT =~ [yY](es)* ]]; then
+       echo
+       echo "Enter new serial number : "
+       read -r NEWSN
+       echo "Applying new serial number"
+       echo "${NEWSN}" > /etc/machine-id
+       echo "${NEWSN}" > /etc/qlauncher
+       echo "Done."
+       echo
+    else
+       echo
+       echo "Use default serial number"
+    fi
+}
+
+function sn() {
+    if [[ -e /etc/qlauncher ]]; then
+       echo
+       echo "Serial Number already exist"
+       echo
+       change_sn
+       echo
+    else
+       echo
+       echo "Serial Number doesn't exist"
+       echo
+       change_sn
+       echo
+    fi
 }
 
 function zipdl() {
@@ -97,6 +131,7 @@ function parse_parameters() {
         "-k"|"--kickoff") kickoff ;;
         "-r"|"--restart") restart ;;
         "-s"|"--status") status ;;
+        "-S"|"--sn") sn ;;
         "-u"|"--update") update ;;
 
         # HELP!
