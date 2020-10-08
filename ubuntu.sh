@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Personal Ubuntu 18.04 setup for QLauncher
+# Personal Ubuntu setup for QLauncher
 #
 # NOTE: Make sure to verify the contents of the script
 #       you downloaded matches the contents of setup.sh
