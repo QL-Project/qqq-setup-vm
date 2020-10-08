@@ -69,7 +69,6 @@ function change_sn() {
        echo "${NEWSN}" > /etc/machine-id
        echo "${NEWSN}" > /etc/qlauncher
        echo "Done."
-       echo
     else
        echo
        echo "Use default serial number"
