@@ -36,11 +36,22 @@ function setup_variables() {
 }
 
 function bind() {
+    echo
+    echo "Scan the QR code below"
+    echo
+    qrencode "NAS-QNAP-$(cat /etc/qlauncher)" -t ANSIUTF8 -o -
+    echo
+    echo "You can also use the link below"
     $QLS bind
+    echo
 }
 
 function check() {
+    echo
+    echo "Current SN : $(cat /etc/qlauncher)"
+    echo
     $QLS check
+    echo
 }
 
 function freeze() {

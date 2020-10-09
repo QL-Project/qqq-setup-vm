@@ -22,6 +22,7 @@ sudo apt update
 sudo apt install \
          curl \
          net-tools \
+         qrencode \
          wget -y
 
 echo
